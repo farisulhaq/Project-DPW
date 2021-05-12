@@ -1,316 +1,372 @@
-    * {
-        margin: 0;
-        padding: 0;
+/*======================================css untuk halaman index======================================*/
+/*-----------------------------------------------index-----------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #020242;
+}
+
+.nav {
+    background-color: #33a7e0;
+    height: 90px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar-left {
+    float: left;
+}
+
+.navbar-right {
+    float: right;
+}
+
+#logo-web {
+    width: 45px;
+    height: auto;
+    padding-left: 2em;
+    padding-top: 25px;
+    padding-right: 3px;
+}
+
+#nm-web {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    color: #020242;
+    margin-top: 0px;
+}
+
+#span-nm {
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #020242;
+}
+
+ul {
+    list-style: none;
+    padding-right: 2em;
+}
+
+ul li {
+    display: inline-block;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    padding-right: 1em;
+}
+
+ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #020242;
+}
+
+#buat-cv {
+    border: 10px solid #020242;
+    background-color: #020242;
+}
+
+#buat-cv:hover {
+    color: #020242;
+    background-color: #ffffff;
+    border: 10px solid #ffffff;
+    cursor: pointer;
+}
+
+#btn-menu,
+#close-menu {
+    color: #ffffff;
+    font-size: 45px;
+    float: right;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 1em;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    #btn-menu {
+        display: block;
     }
-    
-    body {
-        background-color: #020242;
-    }
-    
-    .nav {
-        background-color: #33a7e0;
-        height: 90px;
-        font-family: 'Nunito', sans-serif;
-    }
-    
-    .navbar-left {
-        float: left;
-    }
-    
-    .navbar-right {
-        float: right;
-    }
-    
-    #logo-web {
-        width: 45px;
-        height: auto;
-        padding-left: 2em;
-        padding-top: 25px;
-        padding-right: 3px;
-    }
-    
-    #nm-web {
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 40px;
-        color: #020242;
-        margin-top: 0px;
-    }
-    
-    #span-nm {
-        color: #ffffff;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: #020242;
-    }
-    
     ul {
-        list-style: none;
-        padding-right: 2em;
+        position: fixed;
+        margin-right: 0px;
+        height: 13.5em;
+        right: -100%;
+        top: 90px;
+        background-color: #2991da;
+        text-align: center;
+        transition: .3s;
     }
-    
     ul li {
-        display: inline-block;
-        padding-top: 35px;
-        padding-bottom: 10px;
-        padding-right: 1em;
-    }
-    
-    ul li a {
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    
-    ul li a:hover {
-        color: #020242;
-    }
-    
-    #buat-cv {
-        border: 10px solid #020242;
-        background-color: #020242;
-    }
-    
-    #buat-cv:hover {
-        color: #020242;
-        background-color: #ffffff;
-        border: 10px solid #ffffff;
-        cursor: pointer;
-    }
-    
-    #btn-menu,
-    #close-menu {
-        color: #ffffff;
-        font-size: 45px;
-        float: right;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        padding-right: 1em;
-        cursor: pointer;
-        display: none;
-    }
-    
-    #check {
-        display: none;
-    }
-    
-    @media (max-width: 720px) {
-        #btn-menu {
-            display: block;
-        }
-        ul {
-            position: fixed;
-            margin-right: 0px;
-            height: 13.5em;
-            right: -100%;
-            top: 90px;
-            background-color: #2991da;
-            text-align: center;
-            transition: .3s;
-        }
-        ul li {
-            display: block;
-            padding-left: 3em;
-            line-height: 15px;
-        }
-        #check:checked~ul {
-            right: 0;
-        }
-    }
-    
-    .jd-container {
-        color: white;
-        font-family: 'Quicksand', sans-serif;
-        display: grid;
-        grid-template-columns: repeat(2, auto);
+        display: block;
         padding-left: 3em;
-        padding-right: 3em;
-        padding-top: 3em;
+        line-height: 15px;
     }
-    
-    .jd-content {
-        max-width: 480px;
+    #check:checked~ul {
+        right: 0;
     }
-    
-    #judul {
-        font-size: 50px;
-    }
-    
-    #sub-jd1,
-    #sub-jd2 {
-        font-size: 15px;
-        text-align: justify;
-        margin-top: 35px;
-    }
-    
-    #foto-jd {
-        width: 600px;
-        float: right;
-        padding-right: 3em;
-    }
-    
-    #btn-buat {
-        background-color: #ffffff;
-        height: 30px;
-        width: 175px;
-        margin-top: 35px;
-        padding-top: 15px;
-        padding-bottom: 10px;
-        padding-left: 25px;
-        padding-right: 25px;
-        border-radius: 50px;
-        line-height: 26px;
-    }
+}
 
-    #btn-buat:hover, #buat-skrg:hover {
-        cursor: pointer;
-        background-color: lightblue;
-        color: white;
-    }
+.jd-container {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 3em;
+}
 
-    #buat-skrg {
-        font-size: 15px;
-        color: #020242;
-    }
-    
-    .bg-curved {
-        background-image: url("img/gmb-snow.png"), url("img/gmb-snow.png");
-        background-repeat: repeat-x, repeat-y;
-    }
-    
-    .cr-content {
-        background-color: #ffffff;
-        color: black;
-        text-align: center;
-    }
-    
-    .bg-curved svg {
-        display: block;
-    }
-    
-    .cr-content {
-        font-family: 'Fredoka One', cursive;
-        font-family: 'Quicksand', sans-serif;
-    }
-    
-    .cr-content h1 {
-        color: #232c2e;
-        font-size: 50px;
-    }
-    
-    .cr-content h3 {
-        color: #7e8276;
-        font-size: 30px;
-    }
-    
-    .card-content {
-        margin-left: 150px;
-        margin-top: 50px;
-        padding-bottom: 50px;
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(2, auto);
-    }
-    
-    .card {
-        padding: 45px;
-        background-color: azure;
-        border-color: #d0ccbf;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
-        width: 40%;
-    }
-    
-    .card i {
-        font-size: 100px;
-        padding: 20px;
-    }
-    
-    #cd-1:hover {
-        background-color: #f36d43;
-        box-shadow: 0 8px 16px 0 #f36d43;
-        color: white;
-        transition: 0.3s;
-    }
-    
-    #cd-2:hover {
-        background-color: #f8c652;
-        box-shadow: 0 8px 16px 0 #f8c652;
-        color: white;
-        transition: 0.3s;
-    }
-    
-    #cd-3:hover {
-        background-color: #60b78a;
-        box-shadow: 0 8px 16px 0 #60b78a;
-        color: white;
-        transition: 0.3s;
-    }
-    
-    .card-container {
-        padding: 2px 16px;
-    }
-    
-    .card-container h4 {
-        color: #232c2e;
-    }
-    
-    .card-container p {
-        color: #232c2e;
-    }
-    
-    #round-numb {
-        color: white;
-        font-size: 15px;
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        background-color: black;
-    }
-    
-    #round-numb:hover {
-        color: black;
-        background-color: white;
-    }
-    
-    #numb {
-        padding: 5px;
-    }
-    
-    .bg-curved2 {
-        background-color: #ffffff;
-    }
-    
-    .bg-curved2 svg {
-        display: block;
-    }
-    
-    h3,
-    h5 {
-        color: white;
-        font-family: Arial;
-        font-weight: bold;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 50px;
-    }
-    
-    .contact {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        padding-bottom: 50px;
-    }
-    
-    iframe {
-        height: 110px;
-        width: 375px;
-        padding-left: 50px;
-    }
-    
-    #cp-right {
-        text-align: center;
-        font-family: Arial;
-        color: #ffffff;
-        background-color: #232c2e;
-        padding: 30px;
-    }
+.jd-content {
+    max-width: 480px;
+}
+
+#judul {
+    font-size: 50px;
+}
+
+#sub-jd1,
+#sub-jd2 {
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 35px;
+}
+
+#foto-jd {
+    width: 600px;
+    float: right;
+    padding-right: 3em;
+}
+
+#btn-buat {
+    background-color: #ffffff;
+    height: 30px;
+    width: 175px;
+    margin-top: 35px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 50px;
+    line-height: 26px;
+}
+
+#btn-buat:hover, #buat-skrg:hover {
+    cursor: pointer;
+    background-color: lightblue;
+    color: white;
+}
+
+#buat-skrg {
+    font-size: 15px;
+    color: #020242;
+}
+
+.bg-curved {
+    background-image: url("img/gmb-snow.png"), url("img/gmb-snow.png");
+    background-repeat: repeat-x, repeat-y;
+}
+
+.cr-content {
+    background-color: #ffffff;
+    color: black;
+    text-align: center;
+}
+
+.bg-curved svg {
+    display: block;
+}
+
+.cr-content {
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.cr-content h1 {
+    color: #232c2e;
+    font-size: 50px;
+}
+
+.cr-content h3 {
+    color: #7e8276;
+    font-size: 30px;
+}
+
+.card-content {
+    margin-left: 150px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+.card {
+    padding: 45px;
+    background-color: azure;
+    border-color: #d0ccbf;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card i {
+    font-size: 100px;
+    padding: 20px;
+}
+
+#cd-1:hover {
+    background-color: #f36d43;
+    box-shadow: 0 8px 16px 0 #f36d43;
+    color: white;
+    transition: 0.3s;
+}
+
+#cd-2:hover {
+    background-color: #f8c652;
+    box-shadow: 0 8px 16px 0 #f8c652;
+    color: white;
+    transition: 0.3s;
+}
+
+#cd-3:hover {
+    background-color: #60b78a;
+    box-shadow: 0 8px 16px 0 #60b78a;
+    color: white;
+    transition: 0.3s;
+}
+
+.card-container {
+    padding: 2px 16px;
+}
+
+.card-container h4 {
+    color: #232c2e;
+}
+
+.card-container p {
+    color: #232c2e;
+}
+
+#round-numb {
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#round-numb:hover {
+    color: black;
+    background-color: white;
+}
+
+#numb {
+    padding: 5px;
+}
+
+.bg-curved2 {
+    background-color: #ffffff;
+}
+
+.bg-curved2 svg {
+    display: block;
+}
+
+h3,
+h5 {
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding-bottom: 50px;
+}
+
+iframe {
+    height: 110px;
+    width: 375px;
+    padding-left: 50px;
+}
+
+#cp-right {
+    text-align: center;
+    font-family: Arial;
+    color: #ffffff;
+    background-color: #232c2e;
+    padding: 30px;
+}
+/*=====================================css untuk halaman about us=====================================*/
+/*----------------------------------------------about us----------------------------------------------*/ 
+/*-------about bagian judul-------*/
+.about-content {
+    margin-top: 20px;
+}
+.about-content span {
+    display: inline-block;
+    width: 90%;
+    background-color: white;
+    position: relative;
+    left: 3.5%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+/*-------about bagian isi-------*/
+.container-about {
+    background-color: #ffffff;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.content-about {
+    position: relative;
+    left: 1%;
+    width: 200px;
+    margin: 0 0 3% 3%;
+    float: left;
+}
+
+.image img {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 0 8px 5px #232c2e;
+
+}
+.dec {
+    margin-top: 40px;
+    padding: 0 20px;
+    height: 300px;
+    background-color: lightblue;
+    border-radius: 10%;
+    box-shadow: 0 0 8px 5px #232c2e;
+}
+.dec h2 {
+    padding-top: 20%;
+}
