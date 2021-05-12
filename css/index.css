@@ -75,6 +75,7 @@
         color: #020242;
         background-color: #ffffff;
         border: 10px solid #ffffff;
+        cursor: pointer;
     }
     
     #btn-menu,
@@ -158,8 +159,15 @@
         padding-left: 25px;
         padding-right: 25px;
         border-radius: 50px;
+        line-height: 26px;
     }
-    
+
+    #btn-buat:hover, #buat-skrg:hover {
+        cursor: pointer;
+        background-color: lightblue;
+        color: white;
+    }
+
     #buat-skrg {
         font-size: 15px;
         color: #020242;
