@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
-        <script src="js/script.js"></script>
+        <script src="../js/script.js"></script>
         
         <title>Home</title>
     </head>
@@ -121,7 +121,123 @@
             <h4 id="cp-right">Copyright © 2021 | Design & Develop by F3AD</h4>
         </footer>
 
-
-        <div class="modal"></div>
+        <div class="modal" id="modalForm">
+            <div class="modal-form">
+                <div class="btn-close" id="closeModal">&times;</div>
+                <div id="form-header">
+                    <h1>Formulir CV Mahasiswa</h1>
+                    <h2>Masukkan data sesuai data diri Anda</h2>
+                </div>
+                <form class="form">
+                    <div class="sub-form" id="sub-form1">
+                        <h3>Data Diri</h3>
+                        <hr>
+                        <div class="input-group-2clm">
+                            <div class="input-group" id="photo">
+                                <i class="material-icons" id="photo-icon">add_a_photo</i>
+                                <input type="file" id="up-photo" name="photo-profil">
+                            </div>
+                            <div class="input-group-nm">
+                                <div class="input-group">
+                                    <span>Nama Depan<a>*</a></span><br>
+                                    <input type="text" id="nama-dpn" name="nama-dpn">
+                                </div>
+                                <div class="input-group">
+                                    <span>Nama Belakang<a>*</a></span><br>
+                                    <input type="text" id="nama-blkg" name="nama-blkg">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <span>Tempat Lahir<a>*</a></span><br>
+                                <input type="text" id="kota" name="kota-lahir">
+                            </div>
+                            <div class="input-group">
+                                <span>Tanggal Lahir (dd-mm-yyy)<a>*</a></span><br>
+                                <input type="date" id="tgl" name="tgl-lahir">
+                            </div>
+                            <div class="input-group">
+                                <span>Jenis Kelamin<a>*</a></span><br>
+                                <input list="gender" name="jeniskelamin" id="jkel">
+                                <datalist id="gender">
+                                    <option value="Laki-laki (L)">
+                                    <option value="Perempuan (P)">
+                                </datalist>
+                            </div>
+                            <div class="input-group">
+                                <span>Agama<a>*</a></span><br>
+                                <input type="text" id="agama" name="agama">
+                            </div>
+                            <div class="input-group">
+                                <span>Status Perkawinan<a>*</a></span><br>
+                                <input list="status" name="status-kawin" id="st-kawin">
+                                <datalist id="status">
+                                    <option value="Belum Kawin">
+                                    <option value="Kawin">
+                                    <option value="Cerai Hidup">
+                                    <option value="Cerai Mati">
+                                </datalist>
+                            </div>
+                            <div class="input-group">
+                                <span>Nomor Telepon<a>*</a></span><br>
+                                <input type="text" id="telp" name="numb-telp">
+                            </div>
+                            <div class="input-group">
+                                <span>Email<a>*</a></span><br>
+                                <input type="text" id="email" name="alamat-email">
+                            </div>
+                            <div class="input-group">
+                                <span>Alamat<a>*</a></span><br>
+                                <input type="text" id="alamat" name="alamat-rumah">
+                            </div>
+                            <div class="input-group">
+                                <span>Kota<a>*</a></span><br>
+                                <input type="text" id="kota-asal" name="kota-asal">
+                            </div>
+                            <div class="input-group">
+                                <span>Negara<a>*</a></span><br>
+                                <input type="text" id="negara" name="negara">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-form" id="sub-form2">
+                        <h3>Riwayat Pendidikan</h3>
+                        <hr>
+                        <div class="input-group">
+                            <span>Status/Gelar<a>*</a></span><br>
+                            <input list="gelar" name="gelar-pendidikan" id="gelar">
+                            <datalist id="gelar">
+                                <option value="SD/Setara">
+                                <option value="SMA/Setara">
+                                <option value="SMK/Setara">
+                                <option value="Diploma 1">
+                                <option value="Diploma 3">
+                                <option value="Strata 1">
+                                <option value="Strata 2">
+                                <option value="Strata 3">
+                            </datalist>
+                        </div>
+                        <div class="input-group">
+                            <span>Nama Instansi (Sekolah, Universitas, dll)<a>*</a></span><br>
+                            <input type="text" id="inst" name="nama-instansi">
+                        </div>
+                        <div class="input-group">
+                            <span>Kota<a>*</a></span><br>
+                            <input type="text" id="kota-inst" name="kota-instansi">
+                        </div>
+                        <div class="input-group">
+                            <span>Tahun<a>*</a></span><br>
+                            <input type="text" id="tahun" name="tahun">
+                        </div>
+                        <div class="input-group">
+                            <button type="button" id="btn-pend">
+                                <i class="material-icons" id="btn-new">add_box</i>
+                                <span>Tambah baru</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" id="btn-daftar">Buat</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
