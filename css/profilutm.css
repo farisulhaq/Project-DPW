@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #33a7e0;
+    height: 90px;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-left {
+    float: left;
+}
+
+.navbar-right {
+    float: right;
+}
+
+#logo-web {
+    width: 45px;
+    height: auto;
+    padding-left: 2em;
+    padding-top: 25px;
+    padding-right: 3px;
+}
+
+#nm-web {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    color: #020242;
+    margin-top: 0px;
+}
+
+#span-nm {
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #020242;
+}
+
+ul {
+    list-style: none;
+    padding-right: 2em;
+}
+
+ul li {
+    display: inline-block;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    padding-right: 1em;
+}
+
+ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #020242;
+}
+
+#buatCV {
+    border: 10px solid #020242;
+    background-color: #020242;
+}
+
+#buatCV:hover {
+    color: #020242;
+    background-color: #ffffff;
+    border: 10px solid #ffffff;
+    cursor: pointer;
+}
+
+#btn-menu,
+#close-menu {
+    color: #ffffff;
+    font-size: 45px;
+    float: right;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 1em;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    #btn-menu {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        margin-right: 0px;
+        height: 13.5em;
+        right: -100%;
+        top: 90px;
+        background-color: #2991da;
+        text-align: center;
+        transition: .3s;
+    }
+    ul li {
+        display: block;
+        padding-left: 3em;
+        line-height: 15px;
+    }
+    #check:checked~ul {
+        right: 0;
+    }
+}
+
+body {
+    background-image: url(../img/gedung-rektorat-UTM.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.head-content {
+    width: auto;
+    height: 520px;
+    background: rgb(2, 2, 66, 0.9);
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 15em;
+    padding-bottom: 3em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.head-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.5em;
+    width: 250px;
+    height: 250px;
+}
+
+.head-content p {
+    margin-top: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+h2 {
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.sj-content {
+    text-align: justify;
+    padding-bottom: 35px;
+    padding-left: 105px;
+    padding-right: 105px;
+    background-color: #020242;
+    color: #ffffff;
+}
+
+.sj-content p {
+    padding: 10px;
+}
+
+.vm-content {
+    background-color: #020242;
+    color: #ffffff;
+    padding-bottom: 35px;
+    padding-left: 125px;
+    padding-right: 55px;
+}
+
+.sub-content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.sub-vm {
+    max-width: 145em;
+    padding: 30px;
+    background-color: azure;
+    border-color: #d0ccbf;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+    width: 80%;
+    color: black;
+    text-align: justify;
+}
+
+.sub-vm h4 {
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.sub-vm ol {
+    padding-left: 15px;
+}
+
+#sub-vm1:hover {
+    background-color: #c1241d;
+    box-shadow: 0 8px 16px 0 #c1241d;
+    color: white;
+    transition: 0.3s;
+}
+
+#sub-vm2:hover {
+    background-color: #f8d000;
+    box-shadow: 0 8px 16px 0 #f8d000;
+    color: white;
+    transition: 0.3s;
+}
+
+.artiLogo-content,
+.goals-content {
+    text-align: justify;
+    padding-bottom: 35px;
+    padding-left: 105px;
+    padding-right: 105px;
+    background-color: #020242;
+    color: #ffffff;
+}
+
+.curved-content {
+    background-image: url(../img/bg-collegeGraduate.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #020242;
+}
+
+#logo-kecil {
+    width: 100px;
+    height: 100px;
+    margin-left: 40%;
+}
+
+h3,
+h5 {
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+iframe {
+    height: 110px;
+    width: 375px;
+    padding-left: 50px;
+}
+
+#cp-right {
+    text-align: center;
+    font-family: Arial;
+    color: #ffffff;
+    background-color: #232c2e;
+    padding: 30px;
+}
+
+svg {
+    display: block;
+}
