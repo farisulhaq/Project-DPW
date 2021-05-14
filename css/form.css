@@ -11,6 +11,7 @@
 
 body {
     background-image: linear-gradient(rgb(2, 2, 66), rgb(23, 23, 201));
+    box-sizing: border-box;
 }
 
 
@@ -67,26 +68,26 @@ body {
 
 /*Tampilan list menu ketika mode browser full*/
 
-ul {
+ul.navi {
     list-style: none;
     padding-right: 2em;
 }
 
-ul li {
+ul.navi li {
     display: inline-block;
     padding-top: 35px;
     padding-bottom: 10px;
     padding-right: 1em;
 }
 
-ul li a {
+ul.navi li a {
     color: white;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
 }
 
-ul li a:hover {
+ul.navi li a:hover {
     color: #020242;
 }
 
@@ -128,7 +129,7 @@ ul li a:hover {
     #btn-menu {
         display: block;
     }
-    ul {
+    ul.navi {
         position: fixed;
         margin-right: 0px;
         height: 13.5em;
@@ -138,7 +139,7 @@ ul li a:hover {
         text-align: center;
         transition: .3s;
     }
-    ul li {
+    ul.navi li {
         display: block;
         padding-left: 3em;
         line-height: 15px;
@@ -168,8 +169,8 @@ ul li a:hover {
   berfokus pada tag h3 dan tag h5 yang ada di tag class ct-content
   ct-content = contact content alias content milik div class contact*/
 
-h3,
-h5 {
+.ct-content h3,
+.ct-content h5 {
     color: white;
     font-family: Arial;
     font-weight: bold;
@@ -339,6 +340,7 @@ iframe {
     border: 2px solid #7e8276;
     height: 150px;
     width: 150px;
+    /* overflow: hidden; */
 }
 
 #photo-icon {
@@ -398,26 +400,26 @@ iframe {
 
 .input-group p {
     color: red;
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 3px;
-    padding-bottom: 5px;
-    padding-left: 10px;
+    /* padding-bottom: 5px;
+    padding-left: 10px; */
 }
 
 
 /*Tampilan modal hasil cv berdasarkan data inputan di form sebelumnya*/
 
 .modal-cv {
-    /*display: none;*/
+    display: none;
     position: fixed;
-    z-index: 1;
-    padding-top: 0px;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
 }
 
 
@@ -427,9 +429,9 @@ iframe {
     font-family: 'Nunito', sans-serif;
     background: linear-gradient(rgb(111, 160, 253), rgb(183, 205, 254)) no-repeat;
     width: 1080px;
-    height: 500px;
+    height: 550px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 30px;
     padding-bottom: 100px;
     padding-top: 30px;
     padding-left: 30px;
@@ -527,7 +529,8 @@ iframe {
 }
 
 .resume .base .profile .photo img {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
@@ -554,15 +557,14 @@ iframe {
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 1.5em;
-    text-transform: lowercase;
     color: #283593;
 }
 
-.resume .base .contact div {
+.resume .base .contact-c div {
     line-height: 24px;
 }
 
-.resume .base .contact div span {
+.resume .base .contact-c div span {
     position: relative;
 }
 
@@ -573,7 +575,7 @@ iframe {
 
 .resume .func small {
     width: 100%;
-    padding: 30px;
+    padding: 10px;
     color: wheat;
 }
 
@@ -666,7 +668,8 @@ iframe {
 #btn-cetak {
     background-color: #ffffff;
     height: 30px;
-    width: 175px;
+    width: 100px;
+    text-align: center;
     margin-top: 60px;
     margin-right: 40px;
     padding-top: 15px;
@@ -678,7 +681,8 @@ iframe {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     text-align: center;
-    float: right;
+    margin: 10px auto;
+    /* float: right; */
 }
 
 #btn-cetak:hover,
@@ -686,4 +690,20 @@ iframe {
     cursor: pointer;
     background-color: #0e1442;
     color: white;
+}
+
+@media print {
+    .nav, .bg-dasar, .bg-curved, .contact, footer, .btn-close, #btn-cetak{
+        display: none;
+    }
+    .bingkai-modalCV {
+        font-family: 'Nunito', sans-serif;
+        background: linear-gradient(rgb(111, 160, 253), rgb(183, 205, 254)) no-repeat;
+        width: 1120px;
+        height: 800px;
+        margin: auto;
+        padding: 0;
+        position: relative;
+        border: 2px solid #888;
+    }
 }

@@ -11,7 +11,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
-        <script src="../js/script.js"></script>
         
         <title>Buat CV</title>
     </head>
@@ -29,11 +28,11 @@
                     <i class="material-icons" id="btn-menu">subject</i>
                     <i class="material-icons" id="close-menu">close</i>
                 </label>
-                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="profilutm.html">Profil UTM</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <!-- <li><a href="form.html" id="buatCV">Buat CV</a></li> -->
+                 <ul class="navi">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./profilutm.html">Profil UTM</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <!-- <li><a href="./form.html" id="buatCV">Buat CV</a></li> -->
                 </ul>
             </div>
         </div>
@@ -44,93 +43,93 @@
                         <h1>Formulir CV Mahasiswa</h1>
                         <h2>Masukkan data sesuai data diri Anda</h2>
                     </div>
-                    <form class="form">
+                    <form class="form" action="#" method="POST" onsubmit="return validasi()">
                         <div class="sub-form" id="sub-form1">
                             <h3>Data Diri</h3>
                             <hr>
                             <div class="input-group-2clm">
                                 <div class="input-group"id="photo">
                                     <i class="material-icons" id="photo-icon">add_a_photo</i>
-                                    <input type="file" id="up-photo" name="photo-profil">
-                                    <p></p>
+                                    <input type="file" id="up-photo" name="photo-profil" onchange="hpsErr('up-photo','photoErr')">
+                                    <p id="photoErr"></p>
                                 </div>
                                 <div class="input-group-nm">
                                     <div class="input-group" id="input-group-nm">
                                         <span>Nama Depan<a>*</a></span><br>
-                                        <input type="text" id="nama-dpn" name="nama-dpn">
-                                        <p></p>
+                                        <input type="text" id="nama-dpn" name="nama-dpn" onkeypress="hpsErr('nama-dpn','namaDErr')">
+                                        <p id="namaDErr"></p>
                                     </div>
                                     <div class="input-group" id="input-group-nm">
-                                        <span>Nama Belakang</span><br>
-                                        <input type="text" id="nama-blkg" name="nama-blkg">
-                                        <p></p>
+                                        <span>Nama Belakang<a>*</a></span><br>
+                                        <input type="text" id="nama-blkg" name="nama-blkg" onkeypress="hpsErr('nama-blkg','namaBErr')">
+                                        <p id="namaBErr"></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="input-group-2clm">
                                 <div class="input-group">
                                     <span>Tempat Lahir<a>*</a></span><br>
-                                    <input type="text" id="kota" name="kota-lahir">
-                                    <p></p>
+                                    <input type="text" id="kota" name="kota-lahir" onkeypress="hpsErr('kota','kotaErr')">
+                                    <p id="kotaErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Tanggal Lahir (dd-mm-yyy)<a>*</a></span><br>
-                                    <input type="date" id="tgl" name="tgl-lahir">
-                                    <p></p>
+                                    <input type="date" id="tgl" name="tgl-lahir" onchange="hpsErr('tgl','tglErr')">
+                                    <p id="tglErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Jenis Kelamin<a>*</a></span><br>
-                                    <input list="gender" name="jeniskelamin" id="jkel">
+                                    <input list="gender" name="jeniskelamin" id="jkel" onchange="hpsErr('jkel','jenisKErr')">
                                     <datalist id="gender">
-                                        <option value="Laki-laki (L)">
+                                        <option value="Laki-Laki (L)">
                                         <option value="Perempuan (P)">
                                     </datalist>
-                                    <p></p>
+                                    <p id="jenisKErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Pekerjaan<a>*</a></span><br>
-                                    <input type="text" id="pekerjaan" name="pekerjaan">
-                                    <p></p>
+                                    <input type="text" id="pekerjaan" name="pekerjaan" onkeypress="hpsErr('pekerjaan','pekerjaanErr')">
+                                    <p id="pekerjaanErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Nomor Telepon<a>*</a></span><br>
-                                    <input type="text" id="telp" name="numb-telp">
-                                    <p></p>
+                                    <input type="text" id="telp" name="numb-telp" onkeypress="return angka(event,'telp','telpErr')">
+                                    <p id="telpErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Email<a>*</a></span><br>
-                                    <input type="text" id="email" name="alamat-email">
-                                    <p></p>
+                                    <input type="text" id="email" name="alamat-email" onkeypress="hpsErr('email','emailErr')">
+                                    <p id="emailErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Kewarganegaraan<a>*</a></span><br>
-                                    <input type="text" id="kwn" name="warga-negara">
-                                    <p></p>
+                                    <input type="text" id="kwn" name="warga-negara" onkeypress="hpsErr('kwn','negaraErr')">
+                                    <p id="negaraErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>NIK<a>*</a></span><br>
-                                    <input type="text" id="nik" name="nomor-induk">
-                                    <p></p>
+                                    <input type="text" id="nik" name="nomor-induk" onkeypress="return angka(event,'nik','nikErr')">
+                                    <p id="nikErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Alamat<a>*</a></span><br>
-                                    <input type="text" id="alamat" name="alamat-rumah">
-                                    <p></p>
+                                    <input type="text" id="alamat" name="alamat-rumah" onkeypress="hpsErr('alamat','alamatErr')">
+                                    <p id="alamatErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Situs Website<a>*</a></span><br>
-                                    <input type="text" id="web" name="web">
-                                    <p></p>
+                                    <input type="text" id="web" name="web" onkeypress="hpsErr('web','webErr')">
+                                    <p id="webErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Akun Instagram</span><br>
-                                    <input type="text" id="insta" name="instagram">
-                                    <p></p>
+                                    <input type="text" id="ig" name="instagram" onkeypress="hpsErr('ig','igErr')">
+                                    <p id="igErr"></p>
                                 </div>
                                 <div class="input-group">
                                     <span>Akun Facebook</span><br>
-                                    <input type="text" id="fbook" name="facebook">
-                                    <p></p>
+                                    <input type="text" id="fb" name="facebook" onkeypress="hpsErr('fb','fbErr')">
+                                    <p id="fbErr"></p>
                                 </div>
                             </div>
                         </div>
@@ -138,88 +137,55 @@
                             <h3>Riwayat Pendidikan</h3>
                             <hr>
                             <div class="input-group">
-                                <span>Status/Gelar<a>*</a></span><br>
-                                <input list="gelar" name="gelar-pendidikan" id="gelar-pend">
-                                <datalist id="gelar">
-                                    <option value="SD/Setara">
-                                    <option value="SMP/Setara">
-                                    <option value="SMA/Setara">
-                                    <option value="SMK/Setara">
-                                </datalist>
-                                <p></p>
-                            </div>
-                            <div class="input-group">
                                 <span>Nama Instansi (Sekolah, Universitas, dll)<a>*</a></span><br>
-                                <input type="text" id="inst" name="nama-instansi">
-                                <p></p>
+                                <input type="text" id="sekolah1" name="nama-instansi" onkeypress="hpsErr('sekolah1','skl1Err')">
+                                <p id="skl1Err"></p>
                             </div>
                             <div class="input-group">
                                 <span>Jurusan<a>*</a></span><br>
-                                <input type="text" id="jurusan" name="jurusan">
-                                <p></p>
+                                <input type="text" id="jurusan1" name="jurusan" onkeypress="hpsErr('jurusan1','jrs1Err')">
+                                <p id="jrs1Err"></p>
                             </div>
                             <div class="input-group">
                                 <span>Tahun<a>*</a></span><br>
-                                <input type="text" id="tahun" name="tahun">
-                                <p></p>
+                                <input type="text" id="tahun1" name="tahun" onkeypress="hpsErr('tahun1','thn1Err')">
+                                <p id="thn1Err"></p>
                             </div>
                             <br>
                             <hr>
                             <br>
                             <div class="input-group">
-                                <span>Status/Gelar<a>*</a></span><br>
-                                <input list="gelar" name="gelar-pendidikan" id="gelar-pend">
-                                <datalist id="gelar">
-                                    <option value="SD/Setara">
-                                    <option value="SMP/Setara">
-                                    <option value="SMA/Setara">
-                                    <option value="SMK/Setara">
-                                </datalist>
-                                <p></p>
-                            </div>
-                            <div class="input-group">
                                 <span>Nama Instansi (Sekolah, Universitas, dll)<a>*</a></span><br>
-                                <input type="text" id="inst" name="nama-instansi">
-                                <p></p>
+                                <input type="text" id="sekolah2" name="nama-instansi" onkeypress="hpsErr('sekolah2','skl2Err')">
+                                <p id="skl2Err"></p>
                             </div>
                             <div class="input-group">
                                 <span>Jurusan<a>*</a></span><br>
-                                <input type="text" id="jurusan" name="jurusan">
-                                <p></p>
+                                <input type="text" id="jurusan2" name="jurusan" onkeypress="hpsErr('jurusan2','jrs2Err')">
+                                <p id="jrs2Err"></p>
                             </div>
                             <div class="input-group">
                                 <span>Tahun<a>*</a></span><br>
-                                <input type="text" id="tahun" name="tahun">
-                                <p></p>
+                                <input type="text" id="tahun2" name="tahun" onkeypress="hpsErr('tahun2','thn2Err')">
+                                <p id="thn2Err"></p>
                             </div>
                             <br>
                             <hr>
                             <br>
                             <div class="input-group">
-                                <span>Status/Gelar<a>*</a></span><br>
-                                <input list="gelar" name="gelar-pendidikan" id="gelar-pend">
-                                <datalist id="gelar">
-                                    <option value="SD/Setara">
-                                    <option value="SMP/Setara">
-                                    <option value="SMA/Setara">
-                                    <option value="SMK/Setara">
-                                </datalist>
-                                <p></p>
-                            </div>
-                            <div class="input-group">
                                 <span>Nama Instansi (Sekolah, Universitas, dll)<a>*</a></span><br>
-                                <input type="text" id="inst" name="nama-instansi">
-                                <p></p>
+                                <input type="text" id="sekolah3" name="nama-instansi" onkeypress="hpsErr('sekolah3','skl3Err')">
+                                <p id="skl3Err"></p>
                             </div>
                             <div class="input-group">
                                 <span>Jurusan<a>*</a></span><br>
-                                <input type="text" id="jurusan" name="jurusan">
-                                <p></p>
+                                <input type="text" id="jurusan3" name="jurusan" onkeypress="hpsErr('jurusan3','jrs3Err')">
+                                <p id="jrs3Err"></p>
                             </div>
                             <div class="input-group">
                                 <span>Tahun<a>*</a></span><br>
-                                <input type="text" id="tahun" name="tahun">
-                                <p></p>
+                                <input type="text" id="tahun3" name="tahun" onkeypress="hpsErr('tahun3','thn3Err')">
+                                <p id="thn3Err"></p>
                             </div>
                         </div>
                         <div class="sub-form" id="sub-form2">
@@ -227,21 +193,22 @@
                             <hr>
                             <div class="input-group">
                                 <span>Deskripsi Diri<a>*</a></span><br>
-                                <textarea id="desc-me" name="about-me" placeholder="Ketikkan disini ..."></textarea>
-                                <p></p>
+                                <textarea id="desc-me" name="about-me" placeholder="Isikan Disini ..." onkeypress="hpsErr('desc-me','descErr')"></textarea>
+                                <p id="descErr"></p>
                             </div>
                             <div class="input-group">
                                 <span>Kemampuan<a>*</a></span><br>
-                                <textarea id="skills" name="skills" placeholder="Ketikkan disini ..."></textarea>
-                                <p></p>
+                                <textarea id="skills" name="skills" placeholder="Belum Dapat Diisi ..." disabled></textarea>
+                                <p id="skilErr"></p>
                             </div>
                             <div class="input-group">
                                 <span>Pengalaman (Organisasi, magang, kerja, volunteer, dsb.)<a>*</a></span><br>
-                                <textarea id="exp" name="experion" placeholder="Ketikkan disini ..."></textarea>
-                                <p></p>
+                                <textarea id="exp" name="experion" placeholder="Belum Dapat Diisi ..." disabled></textarea>
+                                <p id="expErr"></p>
                             </div>
                         </div>
-                        <button type="button" id="btn-daftar">Buat</button>
+                        <input type="submit" value="Buat" id="btn-daftar">
+                        <!-- <button type="button" id="btn-daftar">Buat</button> -->
                     </form>
                 </div>
             </div>
@@ -253,39 +220,40 @@
                 <div class="resume">
                     <div class="base">
                         <div class="profile">
-                            <div class="photo">
+                            <div class="photo" id="gambar">
                                 <img src="../img/FEBI FADLILAH NUR AMINAH.jpg"></img>
                             </div>
                             <div class="info">
-                                <h1 class="name">FEBI FADLILAH NUR AMINAH</h1>
-                                <h2 class="job">MAHASISWI</h2>
+                                <h1 class="name" id="namaCV">FEBI FADLILAH NUR AMINAH</h1>
+                                <h2 class="job" id="jobCV">MAHASISWI</h2>
                             </div>
                         </div>
                         <div class="about">
-                            <h3>About Me</h3> Saya adalah seorang mahasiswi asal Jombang
+                            <h3>About Me</h3>
+                            <span id="aboutCV">Saya adalah seorang mahasiswi</span>
                         </div>
-                        <div class="contact">
+                        <div class="contact-c">
                             <h3>Contact Me</h3>
-                            <div class="call"><a href="#"><span>No-telp : 08970914456</span></a></div>
-                            <div class="email"><a href="#"><span>Nama Email : febyfadlilah98@gmail.com </span></a></div>
+                            <div class="call"><a href="#">No-telp : <span id="nohpCV">08970914456</No-telp></a></div>
+                            <div class="email"><a href="#">Nama Email : <span id="emailCV">febyfadlilah98@gmail.com </span></a></div>
                         </div>
                     </div>
                     <div class="func">
                         <div class="profil">
                             <h3>Profile</h3>
                             <ul>
-                                <li><span>Nama : </span><br><small>FEBI FADLILAH NUR AMINAH</small></li>
-                                <li><span>Tempat Lahir :</span><br><small>JOMBANG</small></li>
-                                <li><span>Tanggal Lahir :</span><br><small>20-02-20003</small></li>
-                                <li><span>Jenis Kelamin :</span><br><small>Perempuan</small></li>
-                                <li><span>Alamat :</span><br><small>Ds. Pucangsimo Bandarkedungmulyo, Jombang</small></li>
-                                <li><span>Kewarganegaraan :</span><br><small>Indonesia</small></li>
-                                <li><span>NIK :</span><br><small>3517*********</small></li>
-                                <li><span>Website :</span><br><small>GAPUNYA</small></li>
-                                <li><span>Instagram :</span><br><small>febyfadlilah_</small></li>
-                                <li><span>Facebook :</span><br><small>febyfadlilah</small></li>
-                                <li><span>Skills :</span><br><small>DISI KEMAMPUAN</small></li>
-                                <li><span>Experience :</span><br><small>DISI PENGALAMAN</small></li>
+                                <li><span>Nama : </span><br><small id="nameCV">FEBI FADLILAH NUR AMINAH</small></li>
+                                <li><span>Tempat Lahir :</span><br><small id="kotaCV">JOMBANG</small></li>
+                                <li><span>Tanggal Lahir :</span><br><small id="tglCV">20-02-20003</small></li>
+                                <li><span>Jenis Kelamin :</span><br><small id="genderCV">Perempuan</small></li>
+                                <li><span>Alamat :</span><br><small id="alamatCV">Ds. Pucangsimo Bandarkedungmulyo, Jombang</small></li>
+                                <li><span>Kewarganegaraan :</span><br><small id="negaraCV">Indonesia</small></li>
+                                <li><span>NIK :</span><br><small id="nikCV">3517*********</small></li>
+                                <li><span>Website :</span><br><small id="webCV">-</small></li>
+                                <li><span>Instagram :</span><br><small id="igCV">febyfadlilah_</small></li>
+                                <li><span>Facebook :</span><br><small id="fbCV">febyfadlilah</small></li>
+                                <li><span>Skills :</span><br><small id="skilCV">...</small></li>
+                                <li><span>Experience :</span><br><small id="expCV">...</small></li>
                             </ul>
                         </div>
                     </div>
@@ -293,10 +261,30 @@
                         <div class="edu">
                             <h3>Education</h3>
                             <ul>
-                                <li><span>Nama Sekolah<br>Jurusan</span><small>Tahun Ajaran</small></li>
-                                <li><span>Nama Sekolah<br>Jurusan</span><small>Tahun Ajaran</small></li>
-                                <li><span>Nama Sekolah<br>Jurusan</span><small>Tahun Ajaran</small></li>
-                                <li><span>Nama Sekolah<br>Jurusan</span><small>Tahun Ajaran</small></li>
+                                <li>
+                                    <span>Nama Sekolah</span><br>
+                                    <small id="skl1CV">Sd 1</small>
+                                    <span>Jurusan</span>
+                                    <small id="jrs1CV">MTK</small>
+                                    <span>Tahun Ajaran</span>
+                                    <small id="thn1CV">Tahun Ajaran</small>
+                                </li>
+                                <li>
+                                    <span>Nama Sekolah</span><br>
+                                    <small id="skl2CV">Sd 1</small>
+                                    <span>Jurusan</span>
+                                    <small id="jrs2CV">MTK</small>
+                                    <span>Tahun Ajaran</span>
+                                    <small id="thn2CV">Tahun Ajaran</small>
+                                </li>
+                                <li>
+                                    <span>Nama Sekolah</span><br>
+                                    <small id="skl3CV">Sd 1</small>
+                                    <span>Jurusan</span>
+                                    <small id="jrs3CV">MTK</small>
+                                    <span>Tahun Ajaran</span>
+                                    <small id="thn3CV">Tahun Ajaran</small>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -331,5 +319,6 @@
         <footer>
             <h4 id="cp-right">Copyright © 2021 | Design & Develop by F3AD</h4>
         </footer>
+        <script src="../js/script.js"></script>
     </body>
 </html>
