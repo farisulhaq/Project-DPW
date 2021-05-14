@@ -19,7 +19,7 @@ body {
 
 .bg-dasar {
     height: 2650px;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
 }
 
 
@@ -211,25 +211,6 @@ iframe {
 }
 
 
-/*BANYAK CODE CSS YANG COMENT DI BAWAH INI KARNA TIDAK JADI DIJADIKAN MODAL
-  beberapa syntax dengan atribut selector tertentu sengaja tidak dihilangkan
-  agar bisa dibuat belajar atau menjadi catatan pribadi :)*/
-
-
-/*.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}*/
-
-
 /*Mengatur div content utama box*/
 
 .modal-form {
@@ -240,7 +221,7 @@ iframe {
     height: 2650px;
     margin: auto;
     margin-top: 150px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
     /*OVERFLOW agar setiap box secara otamatis memiliki tampilan scrolling
     overflow: auto;*/
     /*position: relative;*/
@@ -251,32 +232,6 @@ iframe {
     animation-name: animatetop;
     animation-duration: 0.4s*/
 }
-
-
-/*Untuk memberikan animasi modal ketika pertama kali keluar*/
-
-
-/*@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-@keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}*/
 
 
 /*Mengatur tampilan judul box*/
@@ -309,19 +264,6 @@ iframe {
     font-family: 'Quicksand', sans-serif;
     color: #232c2e;
 }
-
-
-/*Mengatur tampilan button Close Modal yang tidak jadi dipakai*/
-
-
-/*.btn-close {
-    float: right;
-    font-size: 50px;
-    font-weight: 800;
-    color: #ffffff;
-    padding-right: 20px;
-    cursor: pointer;
-}*/
 
 
 /*Sub form sendiri merupakan div yang digunakan untuk mengelompokkan jenis masukkan data
@@ -460,4 +402,288 @@ iframe {
     padding-top: 3px;
     padding-bottom: 5px;
     padding-left: 10px;
+}
+
+
+/*Tampilan modal hasil cv berdasarkan data inputan di form sebelumnya*/
+
+.modal-cv {
+    /*display: none;*/
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*Bingkai modal, untuk tampilan cetak hasil inputan data cv*/
+
+.bingkai-modalCV {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(rgb(111, 160, 253), rgb(183, 205, 254)) no-repeat;
+    width: 1080px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    padding-top: 30px;
+    padding-left: 30px;
+    /*OVERFLOW agar setiap box secara otamatis memiliki tampilan scrolling*/
+    overflow: auto;
+    position: relative;
+    border: 2px solid #888;
+    box-shadow: 0 34px 38px 0 rgba(0, 0, 0, 0.2), 0 36px 50px 0 rgba(255, 255, 255, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/*Untuk memberikan animasi modal ketika pertama kali keluar*/
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/*Mengatur tampilan button Close Modal*/
+
+.btn-close {
+    float: right;
+    font-size: 50px;
+    font-weight: 800;
+    color: #ffffff;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.resume a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    transition-duration: 0.3s;
+}
+
+.resume ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume h3 {
+    color: #ffb300;
+    margin: 10px 0;
+    font-size: 1.25em;
+}
+
+.resume {
+    width: 1000px;
+    height: max-content;
+    background: #1a237e;
+    color: #ffffff;
+    margin: 20px auto;
+    box-shadow: 10px 10px #0e1442;
+    position: relative;
+    display: flex;
+}
+
+.resume .base {
+    width: 34%;
+    padding: 30px 15px;
+    background: #283593;
+    color: #ffffff;
+}
+
+.resume .base .profile {
+    background: #ffb300;
+    padding: 30px 15px 40px 15px;
+    margin: -30px -15px 45px -15px;
+    position: relative;
+    z-index: 2;
+}
+
+.resume .base .profile .photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.resume .base .profile .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume .base .profile .info {
+    text-align: center;
+    color: white;
+}
+
+.resume .base .profile .info .name {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    color: #1a237e;
+}
+
+.resume .base .profile .info .job {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.5em;
+    text-transform: lowercase;
+    color: #283593;
+}
+
+.resume .base .contact div {
+    line-height: 24px;
+}
+
+.resume .base .contact div span {
+    position: relative;
+}
+
+.resume .func {
+    width: 100%;
+    padding: 30px;
+}
+
+.resume .func small {
+    width: 100%;
+    padding: 30px;
+    color: wheat;
+}
+
+.resume .func h3 {
+    color: orange;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    line-height: 42px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 8px;
+    transition-duration: 0.3s;
+}
+
+.resume .func .edu small {
+    display: block;
+    opacity: 0.7;
+}
+
+.resume .func .edu ul li {
+    position: relative;
+    margin-left: 15px;
+    padding-left: 25px;
+}
+
+.resume .func .edu ul li:hover::before {
+    animation: circle 1.2s infinite;
+}
+
+.resume .func .edu ul li:hover span {
+    color: yellow;
+}
+
+@keyframes circle {
+    from {
+        box-shadow: 0 0 0 0px yellow;
+    }
+    to {
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+    }
+}
+
+.resume .func .edu ul li::before,
+.resume .func .edu ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.resume .func .edu ul li::before {
+    width: 7px;
+    height: 7px;
+    border: 3px solid white;
+    background: orange;
+    border-radius: 50%;
+    left: 3px;
+    z-index: 1;
+}
+
+.resume .func .edu ul li::after {
+    width: 3px;
+    height: 100%;
+    background: white;
+    left: 5px;
+    top: 0;
+}
+
+.resume .func .edu {
+    width: 80%;
+    background: #283593;
+    padding: 25px;
+    float: left;
+    height: 95%;
+    margin: 5px;
+}
+
+.profil {
+    background: #283593;
+    color: aliceblue;
+    width: 80%;
+    margin: 5px;
+    padding: 25px;
+    height: 95%;
+}
+
+
+/*Button Cetak*/
+
+#btn-cetak {
+    background-color: #ffffff;
+    height: 30px;
+    width: 175px;
+    margin-top: 60px;
+    margin-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 50px;
+    line-height: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    float: right;
+}
+
+#btn-cetak:hover,
+#cetak-skrg:hover {
+    cursor: pointer;
+    background-color: #0e1442;
+    color: white;
 }
