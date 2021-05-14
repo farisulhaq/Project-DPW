@@ -84,7 +84,6 @@ function validasi() {
             document.querySelector("#photoErr").innerHTML = photoErr;
             photo.value = '';
         } else {
-            alert("saya")
             // Preview gambar
             if (photo.files && photo.files[0]) {
                 var reader = new FileReader();
@@ -335,7 +334,6 @@ function validasi() {
     if ((photoErr != "") || (namaDErr != "") || (namaBErr != "") || (kotaErr != "") || (tglErr != "") || (jenisKErr != "") || (pekerjaanErr != "") || (telpErr != "") || (emailErr != "") || (negaraErr != "") || (nikErr != "") || (alamatErr != "") || (webErr != "") || (igErr != "") || (fbErr != "") || (skl1Err != "") || (jrs1Err != "") || (thn1Err != "") || (skl2Err != "") || (jrs2Err != "") || (thn2Err != "") || (skl3Err != "") || (jrs3Err != "") || (thn3Err != "") || (descErr != "") ||(skilErr != "") || (expErr != "")) {
         return false;
     } else {
-        alert("saya")
         document.querySelector(".modal-cv").style.display = "block";
         return false;
     }
