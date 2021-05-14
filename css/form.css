@@ -1,0 +1,463 @@
+/*Selector berlaku untuk semua tampilan*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Selector untuk mengatur tampilan tag body
+  Berfokus pada background color*/
+
+body {
+    background-image: linear-gradient(rgb(2, 2, 66), rgb(23, 23, 201));
+}
+
+
+/*Background dasar agar ada jeda dengan navbar atas
+  supaya modalnya bisa ditumpuk di atasnya pas*/
+
+.bg-dasar {
+    height: 2650px;
+    padding-bottom: 30px;
+}
+
+
+/*Selector mengatur tampilan navbar*/
+
+.nav {
+    background-color: #33a7e0;
+    height: 90px;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-left {
+    float: left;
+}
+
+.navbar-right {
+    float: right;
+}
+
+#logo-web {
+    width: 45px;
+    height: auto;
+    padding-left: 2em;
+    padding-top: 25px;
+    padding-right: 3px;
+}
+
+#nm-web {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    color: #020242;
+    margin-top: 0px;
+}
+
+#span-nm {
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #020242;
+}
+
+
+/*Tampilan list menu ketika mode browser full*/
+
+ul {
+    list-style: none;
+    padding-right: 2em;
+}
+
+ul li {
+    display: inline-block;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    padding-right: 1em;
+}
+
+ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #020242;
+}
+
+#buatCV {
+    border: 10px solid #020242;
+    background-color: #020242;
+}
+
+#buatCV:hover {
+    color: #020242;
+    background-color: #ffffff;
+    border: 10px solid #ffffff;
+    cursor: pointer;
+}
+
+
+/*Hidden button ketika browser window tidak full ukuran 720px ke bawah*/
+
+#btn-menu,
+#close-menu {
+    color: #ffffff;
+    font-size: 45px;
+    float: right;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 1em;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+/*Tampilan list menu responsif*/
+
+@media (max-width: 720px) {
+    #btn-menu {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        margin-right: 0px;
+        height: 13.5em;
+        right: -100%;
+        top: 90px;
+        background-color: #2991da;
+        text-align: center;
+        transition: .3s;
+    }
+    ul li {
+        display: block;
+        padding-left: 3em;
+        line-height: 15px;
+    }
+    #check:checked~ul {
+        right: 0;
+    }
+}
+
+
+/*Mengatur tampilan background melengkung
+  Untuk warna lengkungannya ada di dalam tag svg - path*/
+
+.bg-curved {
+    background-color: linear-gradient(rgb(2, 2, 66), rgb(0, 0, 170));
+}
+
+
+/*Mode agar background melekung tidak memiliki jarak dengan tag div setelahnya */
+
+.bg-curved svg {
+    display: block;
+}
+
+
+/*Mengatur tampilan tulidan heading 3 dan heading 5
+  berfokus pada tag h3 dan tag h5 yang ada di tag class ct-content
+  ct-content = contact content alias content milik div class contact*/
+
+h3,
+h5 {
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+
+/*Mengatur layouting dengan grid pada setiap
+    tag yang ada di dalam tag class contact*/
+
+.contact {
+    background-color: #0e0e8c;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding-bottom: 50px;
+}
+
+
+/*Mengatur tag iframe atau tag yang menampilkan peta lokasi
+  dari embed link google maps point lokasi terkait*/
+
+iframe {
+    height: 110px;
+    width: 375px;
+    padding-left: 50px;
+}
+
+
+/*Tampilan footer yang berisi copyright*/
+
+#cp-right {
+    text-align: center;
+    font-family: Arial;
+    color: #ffffff;
+    background-color: #232c2e;
+    padding: 30px;
+}
+
+
+/*BANYAK CODE CSS YANG COMENT DI BAWAH INI KARNA TIDAK JADI DIJADIKAN MODAL
+  beberapa syntax dengan atribut selector tertentu sengaja tidak dihilangkan
+  agar bisa dibuat belajar atau menjadi catatan pribadi :)*/
+
+
+/*.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}*/
+
+
+/*Mengatur div content utama box*/
+
+.modal-form {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(rgb(111, 160, 253, .8), rgb(183, 205, 254, .6)), url(../img/bg-modal-form.png) center no-repeat;
+    background-size: cover;
+    width: 1080px;
+    height: 2650px;
+    margin: auto;
+    margin-top: 150px;
+    padding-bottom: 30px;
+    /*OVERFLOW agar setiap box secara otamatis memiliki tampilan scrolling
+    overflow: auto;*/
+    /*position: relative;*/
+    border: 2px solid #888;
+    box-shadow: 0 34px 38px 0 rgba(0, 0, 0, 0.2), 0 36px 50px 0 rgba(255, 255, 255, 0.19);
+    /*-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s*/
+}
+
+
+/*Untuk memberikan animasi modal ketika pertama kali keluar*/
+
+
+/*@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}*/
+
+
+/*Mengatur tampilan judul box*/
+
+#form-header {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 40px;
+}
+
+#form-header h1 {
+    color: #232c2e;
+    font-size: 45px;
+}
+
+#form-header h2 {
+    color: #7e8276;
+    font-size: 20px;
+}
+
+
+/*Tampilan utama untuk tag form*/
+
+.form {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-family: 'Quicksand', sans-serif;
+    color: #232c2e;
+}
+
+
+/*Mengatur tampilan button Close Modal yang tidak jadi dipakai*/
+
+
+/*.btn-close {
+    float: right;
+    font-size: 50px;
+    font-weight: 800;
+    color: #ffffff;
+    padding-right: 20px;
+    cursor: pointer;
+}*/
+
+
+/*Sub form sendiri merupakan div yang digunakan untuk mengelompokkan jenis masukkan data
+  berdasarkan klasifikasi data diri, riwayat pendidikan, prestasi, pengalaman organisasi, dsb.*/
+
+.sub-form {
+    padding-top: 20px;
+}
+
+.sub-form h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: #232c2e;
+    padding-left: 0px;
+}
+
+
+/*Mengatur tag div yang ada di dalam class div ini agar bisa di-layouting secara grid
+  dengan 2 kolom per barisnya*/
+
+.input-group-2clm {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/*Input group merupakan tag untuk box kolom inputan dan nama inputan*/
+
+.input-group {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.input-group span {
+    font-size: 15px;
+}
+
+.input-group a {
+    color: red;
+}
+
+#sub-form1 input {
+    width: 430px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#sub-form2 input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.input-group-nm {
+    width: 500px;
+    margin-left: 0px;
+}
+
+#input-group-nm input {
+    width: 590px;
+}
+
+
+/*Mengatur tampilan dari upload file fotonya*/
+
+#photo {
+    background-color: #f0f0f0;
+    border: 2px solid #7e8276;
+    height: 150px;
+    width: 150px;
+}
+
+#photo-icon {
+    font-size: 100px;
+    padding-left: 22px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+#up-photo {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+
+/*Tanpilan button*/
+
+#btn-daftar {
+    width: 170px;
+    margin-top: 20px;
+    margin-left: 26em;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    background-color: #020242;
+    color: #ffffff;
+    border: 2px solid white;
+}
+
+#btn-daftar:hover {
+    background-color: white;
+    color: #020242;
+    border: 2px solid #020242;
+}
+
+
+/*Tampilan rich text box atau input tipe data textarea*/
+
+.input-group #desc-me,
+.input-group #skills,
+.input-group #exp {
+    width: 900px;
+    height: 150px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: black;
+    resize: none;
+}
+
+
+/*Tampilan pemberitahuan error*/
+
+.input-group p {
+    color: red;
+    font-size: 15px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
