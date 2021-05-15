@@ -366,7 +366,7 @@ iframe {
     box-shadow: 0 0 8px 5px #232c2e;
 
 }
-.dec {
+.desc {
     margin-top: 40px;
     padding: 0 20px;
     height: 300px;
@@ -374,6 +374,6 @@ iframe {
     border-radius: 10%;
     box-shadow: 0 0 8px 5px #232c2e;
 }
-.dec h2 {
+.desc h2 {
     padding-top: 20%;
 }

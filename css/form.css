@@ -692,6 +692,7 @@ iframe {
     color: white;
 }
 
+/* css untuk ngeprint */
 @media print {
     .nav, .bg-dasar, .bg-curved, .contact, footer, .btn-close, #btn-cetak{
         display: none;
